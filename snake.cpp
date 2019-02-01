@@ -97,7 +97,7 @@ void setBoard(char board[M][N],struct snake *head,struct food *f)
 }
 void printBoard(char board[M][N])
 {
-    
+
     for(int i=0;i<M;i++)
     {
         for(int j=0;j<N;j++)
@@ -108,9 +108,9 @@ void printBoard(char board[M][N])
             }
             else
             {
-              cout<<board[i][j]<<" ";  
+              cout<<board[i][j]<<" ";
             }
-         
+
         }cout<<endl;
     }
 }
@@ -158,6 +158,7 @@ int valid(char choice,struct snake *head)
     }
     return 0;
 }
+/*
 void writetofile(snake *start,food *f,int *m)
 {
   FILE *fptr;
@@ -174,7 +175,7 @@ void writetofile(snake *start,food *f,int *m)
      char str='$';
      fprintf(fptr,"%c",str);
   fclose(fptr);
-}
+}*/
 // void readfile(snake **start,food *f)
 // {
 //     FILE *fptr;
@@ -186,7 +187,7 @@ void writetofile(snake *start,food *f,int *m)
 //   while(ch!='$')
 //   {
 //     int n=ch-'0';
-  
+
 //     ch=fgetc(fptr);
 //     ch=fgetc(fptr);
 //     int x=ch-'0';
@@ -271,7 +272,7 @@ void movement(char choice,snake **head,food *f,char board[M][N],int *m)
         prev->value='T';
         prev->next=NULL;
     }
-    
+
     if(getfood==1)
     {
         *m=*m+10;
@@ -294,7 +295,7 @@ int main()
     int n = 5;
     while(n--)
     createsnake(&head);
-    
+
     //setBoard(board,head,f);
     //printBoard(board);
     int point=0;
@@ -336,7 +337,7 @@ int main()
             }
 
         struct snake *head1=NULL;
-        char str[10]={'G','A','H','E',' ','O','F','E','R'};
+        char str[10]={'G','A','M','E',' ','O','V','E','R'};
         int k=0;
         while(k<9)
         {
@@ -358,7 +359,7 @@ int main()
         }
         if(ch=='y')
         {
-            writetofile(head,f,&point);
+           // writetofile(head,f,&point);
             cout<<"data has saved\n";
         }
         else
